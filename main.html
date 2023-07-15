@@ -10,9 +10,9 @@ function getRandomCharacter() {
   return randomChar;
 }
 function myFunction() {
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 500; i++) {
     const randomChar = getRandomCharacter();
-    const element = document.createElement('div');
+    const element = document.createElement('span');
     element.textContent = randomChar;
     document.body.appendChild(element);
   }
@@ -21,7 +21,6 @@ function myFunction() {
 </head>
 
 <body onload="myFunction()">
-<p id="demo">demo</p>
 </body>
 
 </html>
