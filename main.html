@@ -3,15 +3,25 @@
 
 <head>
 <script>
+function getRandomCharacter() {
+  const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const randomIndex = Math.floor(Math.random() * characters.length);
+  const randomChar = characters.charAt(randomIndex);
+  return randomChar;
+}
 function myFunction() {
-  var n = Math.floor(Math.random() * 10);
-  document.getElementById("demo").innerHTML = n;
+  for (let i = 0; i < 100; i++) {
+    const randomChar = getRandomCharacter();
+    const element = document.createElement('div');
+    element.textContent = randomChar;
+    document.body.appendChild(element);
+  }
 }
 </script>
 </head>
 
 <body onload="myFunction()">
-<p id="demo"></p>
+<p id="demo">demo</p>
 </body>
 
 </html>
