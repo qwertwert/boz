@@ -11,22 +11,20 @@ function getRandomCharacter() {
 }
 
 function myFunction() {
-  for (let i = 0; i < 500; i++) {
+  for (let i = 0; i < 100; i++) {
     const randomChar = getRandomCharacter();
-
+  
     // Create a new element
     const element = document.createElement('p');
     element.textContent = randomChar;
-
+  
+    // Apply CSS styles
+    element.style.whiteSpace = 'nowrap';
+    element.style.overflow = 'hidden';
+    element.style.textOverflow = 'ellipsis';
+  
     // Append the element to the document body
     document.body.appendChild(element);
-
-    // Check if line width exceeds screen width
-    const lineWidth = element.getBoundingClientRect().width;
-    const screenWidth = window.innerWidth;
-    if (lineWidth > screenWidth) {
-      element.style.display = 'block'; // Apply line break
-    }
   }
 }
 </script>
