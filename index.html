@@ -13,21 +13,26 @@ function getRandomCharacter() {
 function myFunction() {
   for (let i = 0; i < 100; i++) {
     const randomChar = getRandomCharacter();
-  
-    // Create a new element
-    const element = document.createElement('p');
+    const element = document.createElement('div');
     element.textContent = randomChar;
-  
-    // Apply CSS styles
-    element.style.whiteSpace = 'nowrap';
-    element.style.overflow = 'hidden';
-    element.style.textOverflow = 'ellipsis';
-  
-    // Append the element to the document body
     document.body.appendChild(element);
   }
 }
 </script>
+<style>
+  /* Select all div elements and set their display property to inline-block */
+  div {
+      display: inline-block;
+  }
+
+  /* Optional styling for demonstration purposes */
+  div {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: #f0f0f0;
+  }
+</style>
 </head>
 
 <body onload="myFunction()">
