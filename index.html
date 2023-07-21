@@ -4,14 +4,14 @@
 <head>
     <script>
         function getRandomCharacter() {
-            const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            const characters = '-_~.:/?#[]0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
             const randomIndex = Math.floor(Math.random() * characters.length);
             const randomChar = characters.charAt(randomIndex);
             return randomChar;
         }
 
         function myFunction() {
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 300; i++) {
                 const randomChar = getRandomCharacter();
                 const element = document.createElement('div');
                 element.textContent = randomChar;
@@ -22,17 +22,21 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
-            border: 1px solid #ff6060;
-            text-align: center;
+            border: 0px solid #ff6060;
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         div {
-            display: inline-block;
+            margin: 0px;
+            border: 1px solid #aaaaaa;
+            padding: 0px;
             width: 50px;
             height: 50px;
-            margin: 5px;
-            border: 1px solid #aaaaaa;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
