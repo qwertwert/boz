@@ -2,37 +2,39 @@
 <html>
 
 <head>
-<script>
-function getRandomCharacter() {
-  const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  const randomIndex = Math.floor(Math.random() * characters.length);
-  const randomChar = characters.charAt(randomIndex);
-  return randomChar;
-}
+    <script>
+        function getRandomCharacter() {
+            const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            const randomIndex = Math.floor(Math.random() * characters.length);
+            const randomChar = characters.charAt(randomIndex);
+            return randomChar;
+        }
 
-function myFunction() {
-  for (let i = 0; i < 100; i++) {
-    const randomChar = getRandomCharacter();
-    const element = document.createElement('div');
-    element.textContent = randomChar;
-    document.body.appendChild(element);
-  }
-}
-</script>
-<style>
-  /* Select all div elements and set their display property to inline-block */
-  div {
-      display: inline-block;
-  }
-
-  /* Optional styling for demonstration purposes */
-  div {
-      width: 100px;
-      height: 100px;
-      margin: 10px;
-      background-color: #f0f0f0;
-  }
-</style>
+        function myFunction() {
+            for (let i = 0; i < 100; i++) {
+                const randomChar = getRandomCharacter();
+                const element = document.createElement('div');
+                element.textContent = randomChar;
+                document.body.appendChild(element);
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            border: 1px solid #ff6060;
+            text-align: center;
+        }
+        div {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            border: 1px solid #aaaaaa;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body onload="myFunction()">
