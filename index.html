@@ -4,7 +4,7 @@
 <head>
     <script>
         function getRandomCharacter() {
-            const characters = '-_~.:/?#[]0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            const characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
             const randomIndex = Math.floor(Math.random() * characters.length);
             const randomChar = characters.charAt(randomIndex);
             return randomChar;
@@ -29,7 +29,7 @@
             justify-content: center;
         }
         div {
-            margin: 0px;
+            margin: 5px;
             border: 1px solid #aaaaaa;
             padding: 0px;
             width: 50px;
